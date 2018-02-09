@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MVCTutorial.Models.Employee>
+
+@{
+    ViewBag.Title = "Details";
+}
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<h2>Employee Details</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td>Emp ID</td>
+            <td>Name</td>
+            <td>Dept</td>
+            <td>Address</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>@item.Dept</td>
+                    <td>@item.Address</td>
+                </tr>
+            }
+        }        
+    </tbody>
+
+</table>
